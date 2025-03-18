@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="form.css">
+        <title>Employee Registry</title>
+    </head>
+    <body>
+        <p>Property Sale Transaction</p>
+        <form action="transaction_sale.jsp">
+            Sales ID: <input type="number" id = "sales_id" name = "sales_id" required><br><br>
+            Employee ID: <input type="number" id = "employee_id" name = "employee_id" required><br><br>
+            Owner ID: <input type="number" id = "owner_id" name = "owner_id" required><br><br>
+            <label for="sale_category">Sale Category:</label>
+            <select name="sale_category" id="sale_category" required>
+                <option value="Land Sale">Land Sale</option>
+                <option value="House Sale">House Sale</option>  
+            </select><br><br>
+            House Number: <input type="number" id = "house_number" name = "house_number" required><br><br>
+            Land ID: <input type="number" id="land_id" name="land_id" required><br><br>
+            Transfer ID: <input type="number" id="transfer_id" name="transfer_id" required><br><br>
+            Amount Paid: <input type="number" id="amount_paid" name="amount_paid"><br><br>
+            Date of Sale: <input type="date" id = "sale_date" name = "sale_date"><br><br>
+
+            <button type="button">
+                <a href="index.html">Back</a>
+            </button>
+            <input type="reset">
+            <input type="submit" value="Submit">
+      </form>
+    </body>
+</html>

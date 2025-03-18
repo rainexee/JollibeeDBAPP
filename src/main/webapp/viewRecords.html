@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="form.css">
+        <title>View Records</title>
+    </head>
+    <body>
+        <p>Viewing Records</p>
+        <form id="viewForm" method="POST">
+            <label for="viewing_category">What type of record would you like to view:</label>
+            <select name="viewing_category" id="viewing_category" required>
+                <option value="land">Land Record</option>  
+                <option value="house">House Record</option> 
+                <option value="employee">Employee Record</option> 
+                <option value="tenant">Tenant Record</option> 
+            </select><br><br>
+
+            Please input an appropriate ID of the record to be viewed: 
+            <input type="number" id="record_ID" name="record_ID" required><br><br>
+
+            <button type="button">
+                <a href="index.html">Back</a>
+            </button>
+            <input type="reset">
+            <input type="submit" value="Submit" onclick="setFormAction()">
+        </form>
+
+        <script>
+            function setFormAction() {
+                // Get the selected category
+                const viewingCategory = document.getElementById('viewing_category').value;
+
+                // Map category to JSP pages
+                const actions = {
+                    land: "viewLandRecord.jsp",
+                    house: "viewHouseRecord.jsp",
+                    employee: "viewEmployeeRecord.jsp",
+                    tenant: "viewHouseOwnerRecord.jsp"
+                };
+
+                // Set the form action dynamically
+                const form = document.getElementById('viewForm');
+                form.action = actions[viewingCategory] || "defaultPage.jsp"; // Fallback if no match
+            }
+        </script>
+    </body>
+</html>

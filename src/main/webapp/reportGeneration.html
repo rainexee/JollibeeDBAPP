@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="form.css">
+        <title>Report Generation</title>
+        <script>
+            function updateFormAction() {
+                const reportType = document.getElementById("report_type").value;
+                const form = document.getElementById("reportForm");
+
+                switch (reportType) {
+                    case "land_report":
+                        form.action = "reportLandSales.jsp";
+                        break;
+                    case "house_report":
+                        form.action = "reportHouseProgress.jsp";
+                        break;
+                    case "occupancy_report":
+                        form.action = "reportOccupation.jsp";
+                        break;
+                    case "property_sales":
+                        form.action = "reportPropertySale.jsp";
+                        break;
+                    default:
+                        form.action = "index.html"; // Default action
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>Report Generation</p>
+        <form id="reportForm" method="GET" onsubmit="updateFormAction()">
+            <label for="report_type">What type of report would you like to generate:</label>
+            <select name="report_type" id="report_type" required onchange="updateFormAction()">
+                <option value="land_report">Land Sales Report</option>  
+                <option value="house_report">House Progress Report</option> 
+                <option value="occupancy_report">Occupancy Report</option> 
+                <option value="property_sales">Property Sales Report</option> 
+            </select><br><br>
+
+            <label for="report_date">What date would you like a report on:</label>
+            <input type="date" id="report_date" name="report_date"><br><br>
+
+            <label for="house_ID">If occupancy report was selected, provide the ID of the house:</label>
+            <input type="number" id="house_ID" name="house_ID"><br><br>
+
+            <label>If property sales report was selected, provide a week-long range:</label>
+            <input type="date" id="week_range1" name="week_range1">
+            <input type="date" id="week_range2" name="week_range2"><br><br>
+
+            <button type="button">
+                <a href="index.html">Back</a>
+            </button>
+            <input type="reset">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        .container{
+          display:grid;
+          grid-template-columns: 400px 400px;
+          margin:auto;
+          justify-content: center;
+        }
+        .grid-item{
+          grid-row: span 6 ;
+          grid-column: span 1;
+          padding-top: 20px;
+          background-color: rgba(32,45,54, 0.8);
+        }
+        .rectangle {
+          height: 70px;
+          width: 250px;
+          background-color: rgba(47,79,79,.9);
+          border-radius: 12px;
+          margin:0 auto;
+          display:flex;
+          align-items: center;
+          justify-content: center;
+          vertical-align: middle;    
+       }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="grid-item">
+        <div class="rectangle">test</div><br>
+        <div class="rectangle">test</div><br>
+        <div class="rectangle">test</div><br>
+        <div class="rectangle">test</div><br>
+        <div class="rectangle">test</div><br>
+      </div>
+      <div class="grid-item">
+        <div class="rectangle">test</div><br>
+        <div class="rectangle">test</div><br>
+        <div class="rectangle">test</div><br>
+        <div class="rectangle">test</div><br>
+        <div class="rectangle">test</div><br>
+      </div>
+    </div> 
+
+  </body>
+</html> 

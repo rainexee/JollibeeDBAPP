@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="form.css">
+        <title>Employee Registry</title>
+    </head>
+    <body>
+        <p>New Tenant Transaction</p>
+        <form action="transaction_tenant.jsp">
+            Tenant ID: <input type="number" id = "tenant_id" name = "tenant_id" required><br><br>
+            Tenant Last Name: <input type="text" id = "tenant_lastName" name = "tenant_lastName" required><br><br>
+            Tenant Owner First Name: <input type="text" id = "tenant_firstName" name = "tenant_firstName" required><br><br>
+            Tenant Contact Number: <input type="text" id = "tenant_contactNumber" name = "tenant_contactNumber"><br><br>
+            Email: <input type="text" id = "tenant_email" name = "tenant_email"><br><br>
+            Tenant House Number: <input type="number" id = "tenant_houseNumber" name = "tenant_houseNumber" required><br><br>
+            Occupancy Date: <input type="date" id = "occupancyDate" name = "occupancyDate"><br><br>
+            Contract Expiration: <input type="date" id = "contract_expiration" name = "contract_expiration"><br><br>
+
+            <button type="button">
+                <a href="index.html">Back</a>
+            </button>
+            <input type="reset">
+            <input type="submit" value="Submit">
+      </form>
+    </body>
+</html>

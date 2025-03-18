@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="form.css">
+        <title>Employee Registry</title>
+    </head>
+    <body>
+        <p>House Record Deletion</p>
+        <form action="index.html">
+            <label for="deletion">Deletion of Record:</label>
+            <select name="deletion_category" id="deletion_category" required>
+                <option value="land">Land Record</option>  
+                <option value="house">House Record</option> 
+                <option value="employee">Employee Record</option> 
+                <option value="house_owner">Owner Record</option> 
+                <option value="tenant">Tenant Record</option> 
+                <option value="transfers">Transfers Record</option> 
+                <option value="sales">Sales Record</option> 
+                <option value="tenant_rent">Tenant Rent Record</option> 
+            </select><br><br>
+
+            Please input the ID of the record to be deleted <br> (depends on the type of record): <input type="number" id = "houseDues_id" name = "houseDues_id" required><br><br>
+
+            <button type="button">
+                <a href="index.html">Back</a>
+            </button>
+            <input type="reset">
+            <input type="submit" value="Submit">
+      </form>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="form.css">
+        <title>Land Registry</title>
+    </head>
+    <body>
+        <p>Land Registry</p>
+        <form action="register_land.jsp">
+            Land Size: <input type="number" id="land_size" name="land_size"><br><br>
+            Land Price: <input type="number" id="land_price" name="land_price"><br><br>
+            <label for="land_progress">Land Progress Status:</label>    
+            <select name="land_progress" id="land_progress">
+                <option value="DEVELOPED">DEVELOPED</option>
+                <option value="IN DEVELOPMENT">IN DEVELOPMENT</option>
+                <option value="UNDEVELOPED">UNDEVELOPED</option>
+            </select><br><br>
+            <label for="land_sold">Land Sold? </label>    
+            <select name="land_sold" id="land_sold">
+                <option value="true">SOLD</option>
+                <option value="false">FOR SALE</option>
+            </select><br><br>
+
+            <button type="button">
+                <a href="index.html">Back</a>
+            </button>
+            <input type="reset">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
